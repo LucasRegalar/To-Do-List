@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-white: #fff;
+    --light-light-gray: rgb(94, 103, 123);
+    --light-gray: rgb(55, 64, 83);
+    --dark-gray: rgb(31, 40, 56);
+    --dark-dark-gray: rgb(16, 23, 40);
+    --rosa: #ea57ff;
+    --pink: #8036ce;
+    --red: #df3232;
+}
+
+
+html {
+    font-size: 100%; /* (62.5/100) * 16px = 10px. So now 1rem is 10px */
+    color: var(--main-white);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  /*  padding-top: 150px; */
+}
+
+.screen-reader-only {
+    display: none;
+}
+
+h1, h2 {
+    color: var(--light-light-gray);
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+input {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form {
+    width: 800px;
+    margin-bottom: 50px;
+}
+
+.task-input {
+    background-color: var(--dark-gray);
+    color: var(--main-white);
+    border: none;
+    font-size: 1.3rem;
+    padding: 20px;
+    width: 675px;
+    border-radius: 1.2rem;
+    margin-right: 15px;
+}
+
+.task-input::placeholder {
+    color: var(--light-light-gray);
+}
+
+.task-input:focus, .task-edit-input:focus {
+    outline: none;
+}
+
+#tasks-section {
+    width: 800px;
+}
+
+.task {
+    background-color: var(--dark-dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    border-radius: 1.2rem;
+    margin-bottom: 15px;
+}
+
+p, .task-edit-input {
+    margin: 20px;
+}
+
+.task-edit-input {
+    color: var(--main-white);
+    background-color: var(--dark-gray);
+    border: none;
+    font-size: 1.3rem;
+}
+
+.task-edit {
+    background-color: var(--dark-gray);
+}
+
+.button {
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.btn-container {
+    margin: 20px;
+    width: 175px;
+}
+
+.edit-btn, .add-task-btn, .save-btn {
+    background: linear-gradient(to right, var(--rosa), var(--pink));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.delete-btn, .cancel-btn{
+    color: var(--red);
+}
